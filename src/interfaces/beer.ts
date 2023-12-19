@@ -5,5 +5,5 @@ export interface Beer {
   color: string;
   brewery: string;
   beer_style_id: number;
-  beer_style: string;
+  style: string;
 }

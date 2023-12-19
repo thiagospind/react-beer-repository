@@ -4,8 +4,6 @@ interface Props {
 
 export const MainPanel: React.FC<Props> = ({ children }) => {
   return (
-    <div className="rounded-xl bg-slate-50 w-[80%] h-[80%] text-center">
-      {children}
-    </div>
+    <div className="rounded-xl bg-slate-50 w-[80%] text-center">{children}</div>
   );
 };

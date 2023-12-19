@@ -4,6 +4,7 @@ import { User } from "../../interfaces/user";
 import { login } from "../../api/loginApi";
 import { saveToken } from "../../services/auth";
 import { useNavigate } from "react-router-dom";
+import { Input } from "../customComponents/input";
 
 export const Login: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -30,19 +31,14 @@ export const Login: React.FC = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="mx-auto my-auto flex flex-col gap-8 rounded-2xl bg-slate-100 w-[500px] h-[350px] items-center justify-center mt-7 shadow-md">
+      <div className="mx-auto my-auto flex flex-col gap-8 rounded-2xl bg-slate-100 w-[500px] h-[400px] items-center justify-center mt-7 shadow-md">
         <h1 className="text-4xl">Repositório de Cervejas</h1>
+        <h1 className="text-2xl">Login</h1>
         <div className="flex flex-col gap-5 w-80">
-          <input
-            type="email"
-            placeholder="Informe o email"
-            className="rounded-md p-3"
-            name="email"
-          />
-          <input
+          <Input type="email" placeholder="Informe o email" name="email" />
+          <Input
             type="password"
             placeholder="Informe a senha"
-            className="rounded-md p-3"
             name="password"
           />
 
