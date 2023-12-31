@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from "react";
 import "./modal.css"; // Arquivo para estilos básicos
+import { IoCloseSharp } from "react-icons/io5";
 
 interface ModalProps {
   isOpen: boolean;
@@ -16,10 +17,15 @@ export const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-container" onClick={(e) => e.stopPropagation()}>
         <div className="modal-content">
+          <div className="flex justify-end">
+            <button onClick={onClose}>
+              <IoCloseSharp size={20} />
+            </button>
+          </div>
           {children}
-          <button className="modal-close" onClick={onClose}>
+          {/* <button className="modal-close" onClick={onClose}>
             Fechar
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

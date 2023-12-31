@@ -78,7 +78,7 @@ export const BeerList: React.FC = () => {
         )}
       </div>
       <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-        <CreateBeer />
+        <CreateBeer closeModal={() => setModalOpen(false)} />
       </Modal>
     </>
   );

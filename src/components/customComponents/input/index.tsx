@@ -20,12 +20,12 @@ export const Input: React.FC<Props> = ({
   name,
 }) => {
   return (
-    <div className="flex flex-col gap-2">
+    <>
       <label htmlFor={id} hidden={label ? false : true}>
         {label}
       </label>
       <input
-        className={`px-4 py-2 border border-gray-300 rounded-md shadow-inner focus:outline-none focus:border-blue-500 focus:shadow-none ${className}`}
+        className={`px-4 py-2 mx-2 my-4 border border-gray-300 rounded-md shadow-inner focus:outline-none focus:border-blue-500 focus:shadow-none ${className}`}
         placeholder={placeholder}
         id={id}
         value={value}
@@ -33,6 +33,6 @@ export const Input: React.FC<Props> = ({
         type={type}
         name={name}
       />
-    </div>
+    </>
   );
 };
